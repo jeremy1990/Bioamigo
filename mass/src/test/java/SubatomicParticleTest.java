@@ -45,6 +45,16 @@ public class SubatomicParticleTest {
     }
 
     @Test
+    public void testEquals() {
+        Assert.assertFalse(SubatomicParticle.PROTON.equals(
+                SubatomicParticle.NEUTRON));
+        Assert.assertFalse(SubatomicParticle.ELECTRON.equals(null));
+        Assert.assertFalse(SubatomicParticle.NEUTRON.equals("neutron"));
+        Assert.assertTrue(SubatomicParticle.PROTON.equals(
+                SubatomicParticle.PROTON));
+    }
+
+    @Test
     public void testHashCode() {
         Assert.assertNotEquals(SubatomicParticle.PROTON.hashCode(),
                 SubatomicParticle.NEUTRON.hashCode());

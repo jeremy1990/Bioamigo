@@ -5,15 +5,23 @@ package com.bioamigo.molecular;
  * the same objects for all consumptions in this molecular world. These
  * three objects are created as the program runs.
  */
-public class SubatomicParticle implements Particle {
+public final class SubatomicParticle implements Particle {
     /**
      * The mass and name are from
      * <a href="http://physics.nist.gov/constants">CODATA</a>.
      */
     public static final SubatomicParticle PROTON = new SubatomicParticle(
             "proton", "p", 1.007276466879, 1);
+    /**
+     * The mass and name are from
+     * <a href="http://physics.nist.gov/constants">CODATA</a>.
+     */
     public static final SubatomicParticle NEUTRON = new SubatomicParticle(
             "neutron", "n", 1.00866491588, 0);
+    /**
+     * The mass and name are from
+     * <a href="http://physics.nist.gov/constants">CODATA</a>.
+     */
     public static final SubatomicParticle ELECTRON = new SubatomicParticle(
             "electron", "e", 0.000548579909070, -1);
 
@@ -26,10 +34,10 @@ public class SubatomicParticle implements Particle {
      * Do not change the accessibility. Changing it could turn the whole world
      * upside down.
      */
-    private SubatomicParticle(String name,
-                              String symbol,
-                              double mass,
-                              int charge) {
+    private SubatomicParticle(final String name,
+                              final String symbol,
+                              final double mass,
+                              final int charge) {
         this.name = name;
         this.symbol = symbol;
         this.mass = mass;
@@ -63,6 +71,13 @@ public class SubatomicParticle implements Particle {
     }
 
     @Override
+    public boolean equals(final Object obj) {
+        return obj != null && obj instanceof SubatomicParticle
+                && hashCode() == obj.hashCode();
+    }
+
+    @Override
+    @SuppressWarnings("checkstyle:magicnumber")
     public int hashCode() {
         int result = 0;
         result = 31 * result + name.hashCode();

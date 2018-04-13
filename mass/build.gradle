@@ -2,11 +2,20 @@ group 'com.bioamigo'
 version '1.0-SNAPSHOT'
 
 apply plugin: 'java'
+apply plugin: 'jacoco'
+apply plugin: 'checkstyle'
+apply plugin: 'findbugs'
+apply plugin: 'jdepend'
+apply plugin: 'pmd'
 
 sourceCompatibility = 1.8
 
 repositories {
     mavenCentral()
+}
+
+jar {
+    baseName 'bioamigo-mass'
 }
 
 dependencies {
