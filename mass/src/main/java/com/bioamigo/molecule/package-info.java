@@ -5,4 +5,4 @@
  * @author Jiaming Meng
  * @version 1.0
  */
-package com.bioamigo.molecular;
+package com.bioamigo.molecule;

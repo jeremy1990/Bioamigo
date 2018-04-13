@@ -1,8 +1,8 @@
-package com.bioamigo.molecular;
+package com.bioamigo.molecule;
 
 /**
  * In the field of biological study involving mass spectrometer,
- * at the molecular level, proton, neutron, electron are the building blocks
+ * at the molecule level, proton, neutron, electron are the building blocks
  * of the whole world. To simplify the model, only mass, charge matter the most.
  * Thus, {@code Particle} in this context is not the same one as
  * in particle physics.

@@ -1,4 +1,4 @@
-import com.bioamigo.molecular.SubatomicParticle;
+import com.bioamigo.molecule.SubatomicParticle;
 import org.junit.Assert;
 import org.junit.Test;
 

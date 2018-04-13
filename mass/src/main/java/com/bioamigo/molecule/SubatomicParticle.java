@@ -1,8 +1,8 @@
-package com.bioamigo.molecular;
+package com.bioamigo.molecule;
 
 /**
  * Proton, neutron and electron are three subatomic particles which share
- * the same objects for all consumptions in this molecular world. These
+ * the same objects for all consumptions in this molecule world. These
  * three objects are created as the program runs.
  */
 public final class SubatomicParticle implements Particle {
